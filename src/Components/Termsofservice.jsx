@@ -1,5 +1,5 @@
 import React from "react";
-import LegalPageLayout, { LegalSection, BLUE } from "./LegalPageLayout";
+import LegalPageLayout, { LegalSection, BLUE } from "./Legalpagelayout";
 
 const TermsOfService = () => {
   return (
