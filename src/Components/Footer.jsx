@@ -79,8 +79,8 @@ const Footer = () => {
             </h3>
             <ul className="space-y-2.5">
               <FooterLink href="/privacy">Privacy Policy</FooterLink>
-              <FooterLink href="#">Terms of Service</FooterLink>
-              <FooterLink href="#">Cookie Policy</FooterLink>
+              <FooterLink href="/terms">Terms of Service</FooterLink>
+              <FooterLink href="/cookie-policy">Cookie Policy</FooterLink>
             </ul>
           </div>
 

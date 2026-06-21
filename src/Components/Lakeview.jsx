@@ -64,7 +64,7 @@ const Lakeview = () => {
   ];
 
   return (
-    <div className="bg-[#f8f6f1] text-[#1a1a1a] font-sans overflow-hidden">
+    <div className="bg-[#F4F7FB] text-[#1F2937] font-sans overflow-hidden">
       <Navbar />
       {/* ✅ Hero Section - Adapted for Lakeview */}
       <section
@@ -88,7 +88,7 @@ const Lakeview = () => {
             className="text-lg md:text-xl text-gray-300 max-w-2xl"
           >
             Premium Sites for Sale in{" "}
-            <span className="text-[#f4b860] font-semibold">
+            <span className="text-[#7EA6D8] font-semibold">
               Yelawala, Mysore
             </span>
           </motion.p>
@@ -118,9 +118,9 @@ const Lakeview = () => {
           transition={{ duration: 0.8 }}
           className="md:w-1/2 w-full space-y-6"
         >
-          <h2 className="text-3xl md:text-4xl font-semibold text-[#0a2e3d]">
+          <h2 className="text-3xl md:text-4xl font-semibold text-[#1F2937]">
             About{" "}
-            <span className="text-[#f4b860]">Vaishakh Lake View Enclave</span>
+            <span className="text-[#1A3A5C]">Vaishakh Lake View Enclave</span>
           </h2>
           <p className="text-gray-600 leading-relaxed text-lg">
             Are you searching for a plot to build your dream home, a strategic
@@ -129,11 +129,11 @@ const Lakeview = () => {
           </p>
           <p className="text-gray-600 leading-relaxed text-lg">
             We offer a diverse selection of sites for sale in{" "}
-            <span className="text-[#f4b860] font-semibold">
+            <span className="text-[#1A3A5C] font-semibold">
               Yelawala, Mysore
             </span>
             , catering to a variety of needs and budgets. Explore our listing of{" "}
-            <span className="text-[#f4b860] font-semibold">
+            <span className="text-[#1A3A5C] font-semibold">
               Vaishakh Lake View Enclave Yelawala, Mysore
             </span>
             .
@@ -149,17 +149,17 @@ const Lakeview = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-4xl md:text-5xl font-extrabold text-[#0a2e3d] tracking-tight leading-tight mb-4"
+            className="text-4xl md:text-5xl font-extrabold text-[#1F2937] tracking-tight leading-tight mb-4"
           >
             Vaishakh Lake View Enclave{" "}
-            <span className="text-[#f4b860]">Amenities</span>
+            <span className="text-[#1A3A5C]">Amenities</span>
           </motion.h2>
           <motion.div
             initial={{ width: 0, opacity: 0 }}
             whileInView={{ width: "80px", opacity: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.4, duration: 0.8 }}
-            className="h-1.5 bg-[#f4b860] mx-auto rounded-full"
+            className="h-1.5 bg-[#1A3A5C] mx-auto rounded-full"
           ></motion.div>
         </div>
 
@@ -177,15 +177,15 @@ const Lakeview = () => {
                 y: -5,
               }}
               className="group flex flex-col items-center text-center bg-white rounded-2xl shadow-lg p-7 space-y-4
-                         hover:bg-gradient-to-br hover:from-white hover:to-[#f8f6f1] transition-all duration-300 cursor-pointer border border-transparent hover:border-[#f4b860]"
+                         hover:bg-gradient-to-br hover:from-white hover:to-[#F4F7FB] transition-all duration-300 cursor-pointer border border-transparent hover:border-[#1A3A5C]"
             >
               <div
-                className="w-20 h-20 mb-3 flex items-center justify-center rounded-full bg-gradient-to-br from-[#f4b860] to-[#e0a752] text-white text-4xl shadow-md
+                className="w-20 h-20 mb-3 flex items-center justify-center rounded-full bg-gradient-to-br from-[#1A3A5C] to-[#142d47] text-white text-4xl shadow-md
                                transform group-hover:scale-110 transition-transform duration-300"
               >
                 {item.icon}
               </div>
-              <p className="font-bold text-xl text-[#0a2e3d] leading-tight group-hover:text-[#f4b860] transition-colors duration-300">
+              <p className="font-bold text-xl text-[#1F2937] leading-tight group-hover:text-[#1A3A5C] transition-colors duration-300">
                 {item.title}
               </p>
             </motion.div>
@@ -201,16 +201,16 @@ const Lakeview = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-4xl md:text-5xl font-extrabold text-[#0a2e3d] tracking-tight leading-tight mb-4"
+            className="text-4xl md:text-5xl font-extrabold text-[#1F2937] tracking-tight leading-tight mb-4"
           >
-            Why Invest in <span className="text-[#f4b860]">Mysore?</span>
+            Why Invest in <span className="text-[#1A3A5C]">Mysore?</span>
           </motion.h2>
           <motion.div
             initial={{ width: 0, opacity: 0 }}
             whileInView={{ width: "80px", opacity: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.3, duration: 0.8 }}
-            className="h-1.5 bg-[#f4b860] mx-auto rounded-full"
+            className="h-1.5 bg-[#1A3A5C] mx-auto rounded-full"
           ></motion.div>
         </div>
 
@@ -228,10 +228,10 @@ const Lakeview = () => {
               }}
               className="flex items-center flex-col text-center bg-white rounded-xl shadow-lg p-6 space-y-4 hover:shadow-xl transition-all duration-300"
             >
-              <div className="w-16 h-16 mb-2 flex items-center justify-center rounded-full bg-[#f4b860]/20 text-[#f4b860] text-3xl shadow-md transform group-hover:scale-110 transition-transform duration-300">
+              <div className="w-16 h-16 mb-2 flex items-center justify-center rounded-full bg-[#1A3A5C]/20 text-[#1A3A5C] text-3xl shadow-md transform group-hover:scale-110 transition-transform duration-300">
                 {feature.icon}
               </div>
-              <p className="font-semibold text-xl text-[#0a2e3d] leading-tight">
+              <p className="font-semibold text-xl text-[#1F2937] leading-tight">
                 {feature.title}
               </p>
             </motion.div>

@@ -44,6 +44,11 @@ section {
   font-style: italic;
 }
 
+/* Poppins utility */
+.font-poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
 /* Ensure consistent left & right margins site-wide */
 .max-w-7xl, .max-w-6xl, .max-w-5xl {
   margin-left: auto;

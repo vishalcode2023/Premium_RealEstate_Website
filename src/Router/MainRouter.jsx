@@ -12,7 +12,9 @@ import Jjenclave from "../Components/Jjenclave";
 import Lakeview from "../Components/Lakeview";
 import Shivam from "../Components/Shivam";
 import Vanasiri from "../Components/Vanasiri";
-// import PrivacyPolicy from "../Components/PrivacyPolicy";
+import PrivacyPolicy from "../Components/PrivacyPolicy";
+import TermsOfService from "../Components/TermsOfService";
+import CookiePolicy from "../Components/CookiePolicy";
 
 const MainRouter = () => {
   return (
@@ -23,7 +25,9 @@ const MainRouter = () => {
         <Route path="/project" element={<OngoingProjects/>}/>
         <Route path="/services" element={<OurServices/>}/>
         <Route path="/contact" element={<ContactUs/>}/>
-        {/* <Route path="/privacypolicy" element={<PrivacyPolicy/>}/> */}
+        <Route path="/privacy" element={<PrivacyPolicy/>}/>
+        <Route path="/terms" element={<TermsOfService/>}/>
+        <Route path="/cookie-policy" element={<CookiePolicy/>}/>
         <Route path="/project/mynagar" element={<Mynagar/>}/>
         <Route path="/project/jjenclave" element={<Jjenclave/>}/>
         <Route path="/project/lakeview" element={<Lakeview/>}/>

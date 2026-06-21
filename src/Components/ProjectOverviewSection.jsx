@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowUp, Droplet, Trees, Home, Building2, School, Route, Zap, X, ChevronRight } from "lucide-react";
+import { Droplet, Trees, Home, Building2, School, Route, Zap, X, ChevronRight } from "lucide-react";
 
 const BLUE = "#1A3A5C";
 const LIGHT_BG = "#F4F7FB";
@@ -263,18 +263,6 @@ const FeaturedCarousel = () => {
           </motion.div>
         )}
       </AnimatePresence>
-
-      {/* Scroll to top */}
-      <motion.button
-        className="fixed bottom-44 right-6 p-3 rounded-full shadow-lg z-40 text-white"
-        style={{ backgroundColor: BLUE }}
-        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-        aria-label="Scroll to top"
-      >
-        <ArrowUp size={20} />
-      </motion.button>
     </section>
   );
 };

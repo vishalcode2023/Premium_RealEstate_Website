@@ -1,6 +1,5 @@
 import React from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { ArrowUp } from "lucide-react";
 
 const BACKGROUND_COLOR_GOLD = "#F4F7FB";
 const PRIMARY_TEXT_COLOR = "#333333";
@@ -78,13 +77,6 @@ const AboutUsStorySection = () => {
   const headlineY = useTransform(scrollYProgress, [0, 1], [0, 50]);
   const imageGridY = useTransform(scrollYProgress, [0, 1], [0, -100]);
 
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
-
   return (
     <section
       style={{ backgroundColor: BACKGROUND_COLOR_GOLD }}
@@ -146,34 +138,15 @@ const AboutUsStorySection = () => {
               <img
                 src={image.src}
                 alt={image.alt}
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                className="w-full h-full object-cover transition-all duration-500 group-hover:scale-110 group-hover:blur-sm group-hover:brightness-75"
               />
-              <div className="absolute inset-0 bg-black bg-opacity-40 flex items-end p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <p className="text-sm font-semibold">{image.caption}</p>
+              <div className="absolute inset-0 flex items-end p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <p className="text-sm font-semibold drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]">{image.caption}</p>
               </div>
             </motion.div>
           ))}
         </motion.div>
       </div>
-
-      {/* Scroll to Top Button */}
-      <motion.button
-        className="fixed bottom-8 right-8 p-3 rounded-full shadow-lg z-50 transition-colors duration-200"
-        style={{
-          backgroundColor: ACCENT_COLOR_BROWN,
-          color: BACKGROUND_COLOR_GOLD,
-        }}
-        onClick={scrollToTop}
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: 20 }}
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-        transition={{ type: "spring", stiffness: 300, damping: 20 }}
-        aria-label="Scroll to top"
-      >
-        <ArrowUp size={24} />
-      </motion.button>
     </section>
   );
 };
