@@ -12,9 +12,11 @@ import Jjenclave from "../Components/Jjenclave";
 import Lakeview from "../Components/Lakeview";
 import Shivam from "../Components/Shivam";
 import Vanasiri from "../Components/Vanasiri";
+
+
 import PrivacyPolicy from "../Components/PrivacyPolicy";
-import TermsOfService from "../Components/TermsOfService";
-import CookiePolicy from "../Components/CookiePolicy";
+import TermsOfService from "../Components/Termsofservice";
+import CookiePolicy from "../Components/Cookiepolicys";
 
 const MainRouter = () => {
   return (
