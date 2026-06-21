@@ -16,7 +16,7 @@ import Vanasiri from "../Components/Vanasiri";
 
 import PrivacyPolicy from "../Components/PrivacyPolicy";
 import TermsOfService from "../Components/Termsofservice";
-import CookiePolicy from "../Components/Cookiepolicys";
+import CookiePolicy from "../Components/Cookiepolicy";
 
 const MainRouter = () => {
   return (
