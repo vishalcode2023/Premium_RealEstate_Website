@@ -98,7 +98,7 @@ const FeaturedCarousel = () => {
   };
 
   return (
-    <section style={{ backgroundColor: LIGHT_BG }} className="py-16 md:py-24">
+    <section style={{ backgroundColor: LIGHT_BG }} className="py-16 md:py-10">
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
         {/* Header */}
         <div className="text-center mb-10">

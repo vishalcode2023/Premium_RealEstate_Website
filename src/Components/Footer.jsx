@@ -45,11 +45,11 @@ const Footer = () => {
             <div className="space-y-2 text-sm" style={{ color: GREY }}>
               <div className="flex items-start gap-2">
                 <MapPin size={15} className="mt-0.5 flex-shrink-0" style={{ color: BLUE }} />
-                <span>No./Flat No.: 11203, Devasya House, 4th Stage 2nd Phase, Vijayanagara, Mysuru, Karnataka – 570017</span>
+                <span>Sharadha Devi Nagar near Nivedita Nagar #15, ground floor near by Nivedita park Mysore</span>
               </div>
               <div className="flex items-center gap-2">
                 <Phone size={14} style={{ color: BLUE }} />
-                <a href="tel:+918431263217" className="hover:underline">+91 8431263217</a>
+                <span>90195 62901 / 0821-4260677</span>
               </div>
               <div className="flex items-center gap-2">
                 <Mail size={14} style={{ color: BLUE }} />

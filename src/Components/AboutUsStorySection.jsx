@@ -3,7 +3,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 
 const BACKGROUND_COLOR_GOLD = "#F4F7FB";
 const PRIMARY_TEXT_COLOR = "#333333";
-const ACCENT_COLOR_GOLD_TEXT = "#B29272";
+const ACCENT_COLOR_GOLD_TEXT = "#1A3A5C";
 const ACCENT_COLOR_BROWN = "#7D5A4C";
 
 const galleryImages = [
@@ -80,12 +80,12 @@ const AboutUsStorySection = () => {
   return (
     <section
       style={{ backgroundColor: BACKGROUND_COLOR_GOLD }}
-      className="py-20 md:py-32 overflow-hidden relative"
+      className="pt-4 pb-10 md:pb-16 overflow-hidden relative"
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Headline Section - Comes from Left on Scroll */}
         <motion.div
-          className="max-w-4xl mb-20 md:mb-28 lg:mb-36 mx-auto md:mx-0 text-center md:text-left"
+          className="max-w-4xl mb-10 md:mb-14 mx-auto md:mx-0 text-center md:text-left"
           style={{ y: headlineY }}
         >
           <motion.h2
@@ -98,15 +98,8 @@ const AboutUsStorySection = () => {
           >
             Find your perfect plot <br />
             In thriving neighborhoods <br />
-            And cities like Mysore & Bangalore{" "}
-            <motion.span
-              className="inline-block font-script italic relative z-10"
-              style={{ color: ACCENT_COLOR_GOLD_TEXT, fontFamily: "serif" }}
-              variants={textVariants}
-              transition={{ delay: 0.4, duration: 0.7, ease: "easeOut" }}
-            >
-              Stories & history
-            </motion.span>
+            And cities like Mysore & Bangalore{" "} 
+            Stories & history
           </motion.h2>
         </motion.div>
 
@@ -138,7 +131,7 @@ const AboutUsStorySection = () => {
               <img
                 src={image.src}
                 alt={image.alt}
-                className="w-full h-full object-cover transition-all duration-500 group-hover:scale-110 group-hover:blur-sm group-hover:brightness-75"
+                className="w-full h-full object-cover transition-all duration-500 group-hover:scale-110 group-hover:brightness-75"
               />
               <div className="absolute inset-0 flex items-end p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <p className="text-sm font-semibold drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]">{image.caption}</p>

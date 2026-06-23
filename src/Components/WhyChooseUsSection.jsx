@@ -81,7 +81,7 @@ const WhyChooseUsSection = () => {
   return (
     <section
       style={{ backgroundColor: BACKGROUND_COLOR_GOLD }}
-      className="py-20 md:py-32 overflow-hidden"
+      className="py-20 md:py-24 pb-10 md:pb-12 overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Section Header */}
@@ -170,11 +170,7 @@ const WhyChooseUsSection = () => {
                 <Award size={24} className="mt-4 opacity-70" />
               </motion.div>
 
-              {/* Decorative Layer/Shape (Subtle, behind the cards) */}
-              <div
-                className="absolute inset-2 -z-0 rounded-lg transform rotate-3 scale-105 opacity-50"
-                style={{ backgroundColor: HIGHLIGHT_COLOR_LIGHT }}
-              ></div>
+
             </motion.div>
           ))}
         </div>
