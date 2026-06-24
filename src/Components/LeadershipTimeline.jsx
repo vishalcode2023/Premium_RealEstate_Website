@@ -12,7 +12,7 @@ const timelineEvents = [
     year: "1995",
     title: "Foundational Vision",
     description:
-      "Mr. Gangadhar started the journey into real estate 30 years ago, establishing the firm with a commitment to quality housing and community-centric development.",
+      "Mr. Gangadhar started the journey into real estate 30 years ago, establishing the firm with a commitment to quality housing.",
   },
   {
     year: "2005",
@@ -56,68 +56,106 @@ const LeadershipTimeline = () => {
           </p>
         </motion.div>
 
-        {/* Founder Banner — full image with left overlay */}
+        {/* Founder Banner */}
         <motion.div
-          className="rounded-2xl overflow-hidden shadow-xl mb-12 relative"
-          style={{ height: "460px" }}
+          className="rounded-2xl overflow-hidden shadow-xl mb-12"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
         >
-          {/* Full image, centered to show the full person */}
-          <img
-            src="/Img/Founder.jpg"
-            alt="Mr. Gangadhar - Founder"
-            className="w-full h-full object-cover"
-            style={{ objectPosition: "center 20%" }}
-          />
+          {/* ===== MOBILE LAYOUT (< md): full image on top, text block below ===== */}
+          <div className="block md:hidden" style={{ backgroundColor: BLUE }}>
+            {/* Full, uncropped image — nothing overlaid on top of it */}
+            <img
+              src="/Img/Founder.jpg"
+              alt="Mr. Gangadhar - Founder"
+              className="w-full h-auto block"
+            />
 
-          {/* Left-to-right gradient so right side shows the person clearly */}
-          <div
-            className="absolute inset-0"
-            style={{
-              background:
-                "linear-gradient(to right, rgba(10,25,47,0.92) 0%, rgba(10,25,47,0.75) 35%, rgba(10,25,47,0.25) 65%, rgba(10,25,47,0.0) 100%)",
-            }}
-          />
+            {/* Text sits in its own space below the image, never over the face */}
+            <div className="px-6 py-7 text-white">
+              <p className="text-xs uppercase tracking-[0.25em] mb-3 opacity-60">
+                Founder &amp; Managing Director
+              </p>
+              <h3 className="text-3xl font-serif font-bold mb-2 leading-tight">
+                Mr. Gangadhar
+              </h3>
+              <p className="text-sm opacity-60 mb-5 tracking-wide">
+                SVP Developers, Mysore — Est. 1993
+              </p>
 
-          {/* Content — left aligned */}
-          <div className="absolute inset-0 flex flex-col justify-center px-10 md:px-16 text-white" style={{ maxWidth: "520px" }}>
-            <p className="text-xs uppercase tracking-[0.25em] mb-3 opacity-60">
-              Founder & Managing Director
-            </p>
-            <h3 className="text-4xl md:text-5xl font-serif font-bold mb-2 leading-tight">
-              Mr. Gangadhar
-            </h3>
-            <p className="text-sm opacity-60 mb-6 tracking-wide">
-              SVP Developers, Mysore — Est. 1993
-            </p>
+              <div className="w-10 h-px mb-5" style={{ backgroundColor: "rgba(255,255,255,0.4)" }} />
 
-            <div className="w-10 h-px mb-6" style={{ backgroundColor: "rgba(255,255,255,0.4)" }} />
+              <div className="grid grid-cols-3 gap-2">
+                {stats.map(({ num, label }) => (
+                  <div key={label}>
+                    <p className="text-2xl font-bold">{num}</p>
+                    <p className="text-xs uppercase tracking-widest mt-1 opacity-55 leading-snug">
+                      {label}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
 
-            {/* Stats */}
-            <div className="flex gap-10">
-              {stats.map(({ num, label }) => (
-                <div key={label}>
-                  <p className="text-3xl md:text-4xl font-bold">{num}</p>
-                  <p className="text-xs uppercase tracking-widest mt-1 opacity-55">{label}</p>
-                </div>
-              ))}
+          {/* ===== DESKTOP / TABLET LAYOUT (md+): full-bleed image with gradient overlay ===== */}
+          <div className="hidden md:block relative h-[520px] lg:h-[660px]">
+            <img
+              src="/Img/Founder.jpg"
+              alt="Mr. Gangadhar - Founder"
+              className="w-full h-full object-cover"
+              style={{ objectPosition: "center top" }}
+            />
+
+            <div
+              className="absolute inset-0"
+              style={{
+                background:
+                  "linear-gradient(to right, rgba(10,25,47,0.92) 0%, rgba(10,25,47,0.75) 35%, rgba(10,25,47,0.25) 65%, rgba(10,25,47,0.0) 100%)",
+              }}
+            />
+
+            <div className="absolute inset-0 flex flex-col justify-center px-10 md:px-16 text-white" style={{ maxWidth: "520px" }}>
+              <p className="text-xs uppercase tracking-[0.25em] mb-3 opacity-60">
+                Founder &amp; Managing Director
+              </p>
+              <h3 className="text-4xl md:text-5xl font-serif font-bold mb-2 leading-tight">
+                Mr. Gangadhar
+              </h3>
+              <p className="text-sm opacity-60 mb-6 tracking-wide">
+                SVP Developers, Mysore — Est. 1993
+              </p>
+
+              <div className="w-10 h-px mb-6" style={{ backgroundColor: "rgba(255,255,255,0.4)" }} />
+
+              <div className="flex gap-10">
+                {stats.map(({ num, label }) => (
+                  <div key={label}>
+                    <p className="text-3xl md:text-4xl font-bold">{num}</p>
+                    <p className="text-xs uppercase tracking-widest mt-1 opacity-55">{label}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </motion.div>
 
         {/* Horizontal Timeline Cards */}
-        <div className="relative">
-          {/* Connecting line */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 relative">
+          {/* Connecting line — spans exactly from the center of the first dot to the center of the last dot */}
           <div
-            className="hidden md:block absolute top-5 left-0 right-0 h-px"
-            style={{ backgroundColor: LIGHT_BLUE, zIndex: 0 }}
+            className="hidden md:block absolute top-5 h-px"
+            style={{
+              backgroundColor: LIGHT_BLUE,
+              zIndex: 0,
+              left: "calc(100% / 6)",
+              right: "calc(100% / 6)",
+            }}
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {timelineEvents.map((event, index) => (
+          {timelineEvents.map((event, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
@@ -157,7 +195,6 @@ const LeadershipTimeline = () => {
                 </div>
               </motion.div>
             ))}
-          </div>
         </div>
 
       </div>

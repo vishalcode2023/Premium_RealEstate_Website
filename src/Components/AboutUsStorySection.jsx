@@ -105,13 +105,13 @@ const AboutUsStorySection = () => {
 
         {/* Image Gallery Grid */}
         <motion.div
-          className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6 justify-center items-end"
+          className="grid grid-cols-2  sm:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6 justify-center items-end"
           style={{ y: imageGridY }}
         >
           {galleryImages.map((image, index) => (
             <motion.div
               key={index}
-              className="relative w-full overflow-hidden group cursor-pointer"
+              className="relative top-10 w-full overflow-hidden group cursor-pointer"
               style={{
                 height: index % 2 === 0 ? "280px" : "320px",
                 marginBottom: image.initialY,
